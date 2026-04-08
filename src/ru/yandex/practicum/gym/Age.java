@@ -1,5 +1,7 @@
 package ru.yandex.practicum.gym;
-//Возрост группы
+
+//Возраст группы
+
 public enum Age {
     CHILD, ADULT
 }

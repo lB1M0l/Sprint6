@@ -1,7 +1,9 @@
 package ru.yandex.practicum.gym;
 
 import java.util.Objects;
+
 //Тренер
+
 public class Coach {
 
     //фамилия

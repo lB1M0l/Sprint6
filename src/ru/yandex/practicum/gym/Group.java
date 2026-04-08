@@ -1,5 +1,7 @@
 package ru.yandex.practicum.gym;
+
 //Группа
+
 public class Group {
     //название группы
     private String title;

@@ -55,11 +55,6 @@ public class CounterOfTrainings implements Comparable<CounterOfTrainings> {
 
     @Override
     public String toString() {
-        return "CounterOfTrainings{" +
-                "surname='" + surname + '\'' +
-                ", name='" + name + '\'' +
-                ", middleName='" + middleName + '\'' +
-                ", trainingCount=" + trainingCount +
-                '}';
+        return "CounterOfTrainings{" + "surname='" + surname + '\'' + ", name='" + name + '\'' + ", middleName='" + middleName + '\'' + ", trainingCount=" + trainingCount + '}';
     }
 }

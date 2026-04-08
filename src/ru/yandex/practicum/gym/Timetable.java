@@ -3,6 +3,7 @@ package ru.yandex.practicum.gym;
 import java.util.*;
 
 //Класс для хранения и быстрого поиска расписания тренировок по дню недели и времени.
+
 public class Timetable {
 
     private HashMap<DayOfWeek, TreeMap<TimeOfDay, List<TrainingSession>>> timetable = new HashMap<>();
@@ -47,7 +48,7 @@ public class Timetable {
 
     //Подсчет тренировок по тренеру
     public List<CounterOfTrainings> getCountByCoaches() {
-        if(timetable.isEmpty()){
+        if (timetable.isEmpty()) {
             return new ArrayList<>();
         }
         HashMap<Coach, Integer> coachCounts = new HashMap<>();

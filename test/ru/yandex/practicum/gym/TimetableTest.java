@@ -131,33 +131,33 @@ public class TimetableTest {
         CounterOfTrainings actualCoach = counterOfTrainings.get(0);
 
         Assertions.assertEquals(1, counterOfTrainings.size());
-        Assertions.assertEquals("Васильев",actualCoach.getSurname());
-        Assertions.assertEquals("Николай",actualCoach.getName());
-        Assertions.assertEquals("Сергеевич",actualCoach.getMiddleName());
-        Assertions.assertEquals(1,actualCoach.getTrainingCount());
+        Assertions.assertEquals("Васильев", actualCoach.getSurname());
+        Assertions.assertEquals("Николай", actualCoach.getName());
+        Assertions.assertEquals("Сергеевич", actualCoach.getMiddleName());
+        Assertions.assertEquals(1, actualCoach.getTrainingCount());
     }
 
     // Тест с 1 тренером и 3 группами
     @Test
-    void testGetCountByCoachesSingleCoachMultipleTrainings(){
+    void testGetCountByCoachesSingleCoachMultipleTrainings() {
         Timetable timetable = new Timetable();
         Coach coach = new Coach("Васильев", "Николай", "Сергеевич");
         Group group = new Group("Акробатика для детей", Age.CHILD, 60);
         Group group2 = new Group("Акробатика для взрослых", Age.ADULT, 60);
         Group group3 = new Group("Силовая подготовка", Age.ADULT, 60);
 
-        timetable.addNewTrainingSession(new TrainingSession(group,coach,DayOfWeek.MONDAY, new TimeOfDay(13, 0)));
-        timetable.addNewTrainingSession(new TrainingSession(group2,coach,DayOfWeek.MONDAY, new TimeOfDay(16, 0)));
-        timetable.addNewTrainingSession(new TrainingSession(group3,coach,DayOfWeek.TUESDAY, new TimeOfDay(9, 0)));
+        timetable.addNewTrainingSession(new TrainingSession(group, coach, DayOfWeek.MONDAY, new TimeOfDay(13, 0)));
+        timetable.addNewTrainingSession(new TrainingSession(group2, coach, DayOfWeek.MONDAY, new TimeOfDay(16, 0)));
+        timetable.addNewTrainingSession(new TrainingSession(group3, coach, DayOfWeek.TUESDAY, new TimeOfDay(9, 0)));
 
         List<CounterOfTrainings> counterOfTrainings = timetable.getCountByCoaches();
         CounterOfTrainings result = counterOfTrainings.get(0);
 
         Assertions.assertEquals(1, counterOfTrainings.size());
-        Assertions.assertEquals("Васильев",result.getSurname());
-        Assertions.assertEquals("Николай",result.getName());
-        Assertions.assertEquals("Сергеевич",result.getMiddleName());
-        Assertions.assertEquals(3,result.getTrainingCount());
+        Assertions.assertEquals("Васильев", result.getSurname());
+        Assertions.assertEquals("Николай", result.getName());
+        Assertions.assertEquals("Сергеевич", result.getMiddleName());
+        Assertions.assertEquals(3, result.getTrainingCount());
     }
 
     // Тест с несколькими тренерами и проверкой сортировки по убыванию количества тренировок
